@@ -1,7 +1,7 @@
 "use client";
 
 import useCountries from "@/app/hooks/useCountries";
-import { format } from "date-fns";
+import { formatISO } from "date-fns";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useMemo } from "react";
@@ -47,7 +47,7 @@ const ListingCard = ({
     const start = new Date(reservation.startDate);
     const end = new Date(reservation.endDate);
 
-    return `${format(start, "pp")} - ${format(end, "pp")}`;
+    return `${formatISO(start, "pp")} - ${formatISO(end, "pp")}`;
   }, [reservation]);
   return (
     <div
