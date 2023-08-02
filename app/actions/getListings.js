@@ -1,4 +1,6 @@
-import prisma from "./db";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export const listingsData = async (params) => {
   try {
