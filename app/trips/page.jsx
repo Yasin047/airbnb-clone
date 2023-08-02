@@ -5,7 +5,7 @@ import TripsClient from "./TripsClient";
 
 const page = async () => {
   const currentUser = await getCurrentUser();
-  const reservations = await getReservation({ userId: currentUser.id });
+  const reservations = await getReservation({ userId: currentUser?.id });
 
   if (!currentUser) {
     return <EmptyState title="Unauthorized" subtitle="Please login" />;

@@ -5,7 +5,7 @@ import PropertiesClient from "./PropertiesClient";
 
 const page = async () => {
   const currentUser = await getCurrentUser();
-  const listings = await listingsData({ userId: currentUser.id });
+  const listings = await listingsData({ userId: currentUser?.id });
 
   if (!currentUser) {
     return <EmptyState title="Unauthorized" subtitle="Please login" />;
