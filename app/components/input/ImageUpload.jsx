@@ -16,7 +16,7 @@ const ImageUpload = ({ value, onChange }) => {
     <div>
       <CldUploadWidget
         onUpload={ImageUpload}
-        uploadPreset="sclbvdxu"
+        uploadPreset="ipbkfvqq"
         options={{ maxFiles: 1 }}
       >
         {({ open }) => {
